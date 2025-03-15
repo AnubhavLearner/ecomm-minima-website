@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Heart } from "lucide-react";
+import { Heart, ShoppingBag } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Product } from "@/utils/types";
 
@@ -44,6 +44,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
             imageLoaded ? "opacity-100" : "opacity-0"
           }`}
           onLoad={handleImageLoad}
+          loading="lazy"
         />
 
         {/* Badges */}
@@ -136,10 +137,19 @@ const ProductCard = ({ product }: ProductCardProps) => {
         )}
       </div>
 
-      {/* Quick add button appears on hover */}
-      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background to-transparent p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+      {/* Quick add button appears on hover/touch */}
+      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background to-transparent p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 sm:hidden md:block touch-manipulation">
         <Button className="w-full" variant="secondary" size="sm">
+          <ShoppingBag className="h-4 w-4 mr-2" />
           Quick Add
+        </Button>
+      </div>
+      
+      {/* Always visible on mobile */}
+      <div className="p-4 pt-0 md:hidden">
+        <Button className="w-full" variant="secondary" size="sm">
+          <ShoppingBag className="h-4 w-4 mr-2" />
+          Add to Cart
         </Button>
       </div>
     </Link>

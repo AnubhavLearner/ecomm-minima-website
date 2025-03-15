@@ -1,218 +1,292 @@
 
-import { Product } from './types';
+import { Product } from "./types";
 
-export const products: Product[] = [
+// Mock products data
+const products: Product[] = [
   {
-    id: "aaaaa",
-    name: "Premium Wireless Headphones",
+    id: "p1",
+    name: "Wireless Noise-Cancelling Headphones",
     category: "Audio",
-    price: 299.99,
-    discountPrice: 249.99,
+    price: 349.99,
     rating: 4.8,
-    reviews: 245,
+    reviews: 1254,
     inStock: true,
     images: [
       "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1577174881658-0f30ed549adc?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1583394838336-acd977736f90?q=80&w=1000&auto=format&fit=crop"
+      "https://images.unsplash.com/photo-1484704849700-f032a568e944?q=80&w=1000&auto=format&fit=crop",
     ],
-    colors: ["#000000", "#FFFFFF", "#C0C0C0"],
-    description: "Experience immersive sound with our flagship wireless headphones. Featuring active noise cancellation, premium audio drivers, and up to 30 hours of battery life.",
+    colors: ["#000000", "#ffffff", "#c0c0c0"],
+    description: "Premium wireless headphones with industry-leading noise cancellation technology.",
+    details: [
+      "Up to 30 hours of battery life",
+      "Active Noise Cancellation",
+      "Bluetooth 5.0 connectivity",
+      "Touch controls",
+      "Compatible with voice assistants",
+    ],
+    featured: true,
+    bestSeller: true,
+  },
+  {
+    id: "p2",
+    name: "Ultra-Thin Laptop",
+    category: "Computing",
+    price: 1299.99,
+    rating: 4.7,
+    reviews: 876,
+    inStock: true,
+    images: [
+      "https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1593642634367-d91a135587b5?q=80&w=1000&auto=format&fit=crop",
+    ],
+    colors: ["#808080", "#c0c0c0"],
+    description: "Powerful yet incredibly thin and light laptop for professionals on the go.",
+    details: [
+      "12th Gen Intel Core i7 processor",
+      "16GB RAM",
+      "512GB SSD",
+      "14-inch 4K display",
+      "12 hours battery life",
+    ],
+    featured: true,
+  },
+  {
+    id: "p3",
+    name: "Smart Watch Series 5",
+    category: "Wearables",
+    price: 399.99,
+    discountPrice: 349.99,
+    rating: 4.6,
+    reviews: 743,
+    inStock: true,
+    images: [
+      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?q=80&w=1000&auto=format&fit=crop",
+    ],
+    colors: ["#000000", "#c0c0c0", "#FFD700"],
+    sizes: ["38mm", "42mm"],
+    description: "Advanced smartwatch with health tracking features and always-on display.",
+    details: [
+      "ECG and heart rate monitoring",
+      "Water resistant to 50 meters",
+      "GPS + Cellular",
+      "Always-on Retina display",
+      "18-hour battery life",
+    ],
+    featured: true,
+    bestSeller: true,
+    new: true,
+  },
+  {
+    id: "p4",
+    name: "Wireless Earbuds Pro",
+    category: "Audio",
+    price: 199.99,
+    rating: 4.5,
+    reviews: 892,
+    inStock: true,
+    images: [
+      "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1628786078129-88f7255299dd?q=80&w=1000&auto=format&fit=crop",
+    ],
+    colors: ["#000000", "#ffffff"],
+    description: "True wireless earbuds with active noise cancellation and spatial audio.",
     details: [
       "Active Noise Cancellation",
-      "30-hour battery life",
-      "Premium audio drivers",
-      "Bluetooth 5.2 connectivity",
-      "Comfortable over-ear design",
-      "Quick charge - 5 hours in 10 minutes"
+      "Transparency mode",
+      "Spatial audio with dynamic head tracking",
+      "Sweat and water resistant",
+      "Up to 6 hours of listening time",
     ],
-    featured: true,
-    bestSeller: true
+    bestSeller: true,
   },
   {
-    id: "aaaab",
-    name: "Ultra-Slim Laptop Pro",
-    category: "Computers",
+    id: "p5",
+    name: "4K Ultra HD Smart TV",
+    category: "Computing",
     price: 1499.99,
-    rating: 4.9,
-    reviews: 187,
+    discountPrice: 1299.99,
+    rating: 4.4,
+    reviews: 512,
     inStock: true,
     images: [
-      "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1602080858428-57174f9431cf?q=80&w=1000&auto=format&fit=crop"
+      "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1601944179066-29b8f7e24a3e?q=80&w=1000&auto=format&fit=crop",
     ],
-    colors: ["#808080", "#C0C0C0"],
-    description: "Powerful performance in an ultralight package. This premium laptop features the latest processor, stunning display, and all-day battery life in a sleek, minimalist design.",
+    description: "Premium 4K Ultra HD Smart TV with OLED display technology.",
     details: [
-      "Latest generation processor",
-      "16GB RAM, 512GB SSD",
-      "14-inch 4K display",
-      "Ultra-thin aluminum chassis",
-      "All-day battery life",
-      "Thunderbolt 4 ports"
+      "65-inch OLED display",
+      "4K Ultra HD resolution",
+      "Smart TV with voice control",
+      "Dolby Vision and Atmos",
+      "Multiple HDMI and USB ports",
     ],
     featured: true,
-    new: true
   },
   {
-    id: "aaaac",
-    name: "Smart Fitness Watch",
-    category: "Wearables",
-    price: 199.99,
-    discountPrice: 169.99,
-    rating: 4.6,
-    reviews: 312,
-    inStock: true,
-    images: [
-      "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?q=80&w=1000&auto=format&fit=crop"
-    ],
-    colors: ["#000000", "#FFFFFF", "#FF0000"],
-    sizes: ["S", "M", "L"],
-    description: "Take control of your fitness journey with our advanced smart watch. Track workouts, monitor health metrics, and stay connected with notifications, all with a sleek, minimalist design.",
-    details: [
-      "Advanced health monitoring",
-      "20+ workout modes",
-      "GPS tracking",
-      "5 ATM water resistance",
-      "7-day battery life",
-      "Always-on display"
-    ],
-    bestSeller: true
-  },
-  {
-    id: "aaaad",
-    name: "Minimalist Desk Lamp",
-    category: "Home",
-    price: 79.99,
-    rating: 4.7,
-    reviews: 128,
-    inStock: true,
-    images: [
-      "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1540932239986-30128078f3c5?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?q=80&w=1000&auto=format&fit=crop"
-    ],
-    colors: ["#000000", "#FFFFFF", "#C0C0C0"],
-    description: "Elevate your workspace with our minimalist desk lamp. Featuring adjustable brightness, color temperature control, and a sleek, modern design that complements any interior.",
-    details: [
-      "Adjustable brightness levels",
-      "Color temperature control",
-      "Touch-sensitive controls",
-      "USB charging port",
-      "Energy-efficient LED",
-      "5-year warranty"
-    ],
-    featured: true
-  },
-  {
-    id: "aaaae",
-    name: "Premium Wireless Earbuds",
-    category: "Audio",
-    price: 149.99,
-    discountPrice: 129.99,
-    rating: 4.5,
-    reviews: 276,
-    inStock: true,
-    images: [
-      "https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1608156639585-b3a032ef9689?q=80&w=1000&auto=format&fit=crop"
-    ],
-    colors: ["#000000", "#FFFFFF", "#0000FF"],
-    description: "Immerse yourself in premium audio with our wireless earbuds. Enjoy crystal-clear sound, active noise cancellation, and a comfortable fit for all-day listening.",
-    details: [
-      "Active noise cancellation",
-      "8-hour battery life (28 with case)",
-      "Water and sweat resistant",
-      "Touch controls",
-      "Wireless charging case",
-      "Customizable ear tips"
-    ],
-    new: true
-  },
-  {
-    id: "aaaaf",
-    name: "Designer Mechanical Keyboard",
+    id: "p6",
+    name: "Premium Mechanical Keyboard",
     category: "Accessories",
-    price: 159.99,
-    rating: 4.7,
-    reviews: 142,
+    price: 149.99,
+    rating: 4.9,
+    reviews: 324,
     inStock: true,
     images: [
       "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1618384887517-7ced21a2ca1e?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1598662779094-110c2bad80b5?q=80&w=1000&auto=format&fit=crop"
+      "https://images.unsplash.com/photo-1619008054559-aa8c110d0e0f?q=80&w=1000&auto=format&fit=crop",
     ],
-    colors: ["#000000", "#808080", "#C0C0C0"],
-    description: "Elevate your typing experience with our premium mechanical keyboard. Featuring tactile switches, customizable RGB lighting, and a sleek, minimalist design built to last.",
+    colors: ["#000000", "#c0c0c0", "#008080"],
+    description: "High-performance mechanical keyboard with customizable RGB lighting.",
     details: [
-      "Premium mechanical switches",
-      "Customizable RGB lighting",
+      "Mechanical switches with 50 million keystroke lifespan",
+      "Full RGB backlighting with per-key customization",
       "Aircraft-grade aluminum frame",
-      "Programmable keys",
       "Detachable USB-C cable",
-      "Compatible with all major operating systems"
+      "Programmable macros",
     ],
-    featured: true
+    new: true,
   },
   {
-    id: "aaaag",
-    name: "Smart Home Hub",
-    category: "Smart Home",
-    price: 129.99,
-    rating: 4.6,
-    reviews: 198,
-    inStock: true,
-    images: [
-      "https://images.unsplash.com/photo-1558002038-1055e2cfae43?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1551651056-3746090fbdda?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1522050212171-61b01dd24579?q=80&w=1000&auto=format&fit=crop"
-    ],
-    colors: ["#FFFFFF", "#808080"],
-    description: "Control your entire smart home ecosystem with our intuitive hub. Connect lights, thermostats, security, and more from a single, elegant device with voice and app control.",
-    details: [
-      "Compatible with 100+ smart devices",
-      "Voice assistant integration",
-      "Easy setup process",
-      "Energy usage tracking",
-      "Custom routines and automations",
-      "Advanced security protocols"
-    ],
-    new: true
-  },
-  {
-    id: "aaaah",
-    name: "Minimalist Leather Wallet",
+    id: "p7",
+    name: "Wireless Charging Pad",
     category: "Accessories",
-    price: 49.99,
-    rating: 4.8,
-    reviews: 215,
+    price: 59.99,
+    discountPrice: 49.99,
+    rating: 4.3,
+    reviews: 278,
     inStock: true,
     images: [
-      "https://images.unsplash.com/photo-1556382363-8427ffa64068?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1627123424574-724758594e93?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1614254613444-0a5cb1c272c2?q=80&w=1000&auto=format&fit=crop"
+      "https://images.unsplash.com/photo-1625768376503-68d2495d78c4?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1658946699372-a04fae19ab0b?q=80&w=1000&auto=format&fit=crop",
     ],
-    colors: ["#000000", "#964B00", "#808080"],
-    description: "Carry your essentials in style with our minimalist leather wallet. Crafted from premium full-grain leather, featuring a slim profile with smart organization for cards and cash.",
+    colors: ["#000000", "#ffffff"],
+    description: "Fast wireless charging pad compatible with all Qi-enabled devices.",
     details: [
-      "Premium full-grain leather",
-      "RFID blocking technology",
-      "Ultra-slim profile",
-      "6 card slots and cash pocket",
-      "Hand-stitched details",
-      "Ages beautifully with use"
+      "15W fast charging",
+      "Slim and compact design",
+      "LED charging indicator",
+      "Foreign object detection",
+      "Overcharge protection",
     ],
-    bestSeller: true
-  }
+    bestSeller: true,
+  },
+  {
+    id: "p8",
+    name: "Smart Home Hub",
+    category: "Computing",
+    price: 129.99,
+    rating: 4.2,
+    reviews: 156,
+    inStock: true,
+    images: [
+      "https://images.unsplash.com/photo-1558002038-1055e2e89a68?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1596207891316-23851be3cc20?q=80&w=1000&auto=format&fit=crop",
+    ],
+    colors: ["#ffffff", "#000000", "#808080"],
+    description: "Central hub for controlling all your smart home devices.",
+    details: [
+      "Compatible with 1000+ smart home devices",
+      "Voice control capability",
+      "Energy usage monitoring",
+      "Custom automation routines",
+      "Advanced security features",
+    ],
+    new: true,
+  },
+  {
+    id: "p9",
+    name: "Portable Bluetooth Speaker",
+    category: "Audio",
+    price: 99.99,
+    rating: 4.4,
+    reviews: 421,
+    inStock: true,
+    images: [
+      "https://images.unsplash.com/photo-1546435770-a3e426bf472b?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?q=80&w=1000&auto=format&fit=crop",
+    ],
+    colors: ["#000000", "#FF0000", "#0000FF"],
+    description: "Durable, waterproof Bluetooth speaker with exceptional sound quality.",
+    details: [
+      "20 hours battery life",
+      "IPX7 waterproof rating",
+      "Built-in microphone for calls",
+      "Connect multiple speakers",
+      "Compact and portable design",
+    ],
+    featured: true,
+  },
+  {
+    id: "p10",
+    name: "Ergonomic Office Chair",
+    category: "Accessories",
+    price: 299.99,
+    discountPrice: 249.99,
+    rating: 4.7,
+    reviews: 189,
+    inStock: true,
+    images: [
+      "https://images.unsplash.com/photo-1505843513577-22bb7d21e455?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1589884629108-3193400c7cc9?q=80&w=1000&auto=format&fit=crop",
+    ],
+    colors: ["#000000", "#808080", "#A52A2A"],
+    description: "Premium ergonomic office chair designed for comfort during long work sessions.",
+    details: [
+      "Adjustable lumbar support",
+      "4D armrests",
+      "Breathable mesh backrest",
+      "Adjustable headrest",
+      "5-year warranty",
+    ],
+  },
+  {
+    id: "p11",
+    name: "Fitness Tracker Band",
+    category: "Wearables",
+    price: 89.99,
+    rating: 4.3,
+    reviews: 345,
+    inStock: true,
+    images: [
+      "https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1576243345690-4e4b79b63288?q=80&w=1000&auto=format&fit=crop",
+    ],
+    colors: ["#000000", "#FF0000", "#008000"],
+    sizes: ["S", "M", "L"],
+    description: "Advanced fitness tracker with heart rate monitoring and GPS.",
+    details: [
+      "24/7 heart rate monitoring",
+      "Built-in GPS",
+      "Sleep tracking",
+      "Water resistant to 50m",
+      "7-day battery life",
+    ],
+    new: true,
+  },
+  {
+    id: "p12",
+    name: "Wireless Gaming Mouse",
+    category: "Accessories",
+    price: 79.99,
+    rating: 4.6,
+    reviews: 267,
+    inStock: true,
+    images: [
+      "https://images.unsplash.com/photo-1605773527852-c546a8584ea3?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1614775077393-5eceafb4be46?q=80&w=1000&auto=format&fit=crop",
+    ],
+    colors: ["#000000", "#FF0000"],
+    description: "High-precision wireless gaming mouse with customizable buttons.",
+    details: [
+      "25,000 DPI optical sensor",
+      "Ultra-low latency wireless connection",
+      "8 programmable buttons",
+      "RGB lighting",
+      "70-hour battery life",
+    ],
+    bestSeller: true,
+  },
 ];
-
-export const getProductById = (id: string): Product | undefined => {
-  return products.find(product => product.id === id);
-};
 
 export const getFeaturedProducts = (): Product[] => {
   return products.filter(product => product.featured);
@@ -226,8 +300,16 @@ export const getNewProducts = (): Product[] => {
   return products.filter(product => product.new);
 };
 
-export const getRelatedProducts = (currentProductId: string, category: string): Product[] => {
+export const getAllProducts = (): Product[] => {
+  return products;
+};
+
+export const getProductById = (id: string): Product | undefined => {
+  return products.find(product => product.id === id);
+};
+
+export const getRelatedProducts = (category: string, currentId: string): Product[] => {
   return products
-    .filter(product => product.id !== currentProductId && product.category === category)
+    .filter(product => product.category === category && product.id !== currentId)
     .slice(0, 4);
 };
