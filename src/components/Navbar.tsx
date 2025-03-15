@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Search, ShoppingBag, Menu, X, User, LogIn } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ButtonLink } from "@/components/ui/button-link";
 import { useAuth } from "@/contexts/AuthContext";
 import SearchBar from "@/components/SearchBar";
 
@@ -133,15 +134,15 @@ const Navbar = () => {
               </div>
               <div className="flex items-center space-x-4">
                 {isAuthenticated ? (
-                  <Button variant="outline" size="sm" className="flex-1" as={Link} to="/account">
+                  <ButtonLink variant="outline" size="sm" className="flex-1" to="/account">
                     <User className="h-4 w-4 mr-2" />
                     My Account
-                  </Button>
+                  </ButtonLink>
                 ) : (
-                  <Button variant="outline" size="sm" className="flex-1" as={Link} to="/login">
+                  <ButtonLink variant="outline" size="sm" className="flex-1" to="/login">
                     <LogIn className="h-4 w-4 mr-2" />
                     Sign In
-                  </Button>
+                  </ButtonLink>
                 )}
               </div>
             </div>

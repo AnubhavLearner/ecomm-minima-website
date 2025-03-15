@@ -13,6 +13,12 @@ export type Product = {
   featured: boolean;
   colors?: string[];
   sizes?: string[];
+  // Add missing properties
+  bestSeller?: boolean;
+  new?: boolean;
+  discountPrice?: number;
+  details?: string[];
+  inStock?: boolean;
 };
 
 export type Category = {

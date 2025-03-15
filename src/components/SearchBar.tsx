@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Search, X } from "lucide-react";
@@ -80,7 +79,7 @@ const SearchBar = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }
                     >
                       <div className="h-12 w-12 overflow-hidden rounded bg-secondary">
                         <img 
-                          src={product.imageSrc} 
+                          src={product.images[0]} 
                           alt={product.name} 
                           className="h-full w-full object-cover"
                         />
