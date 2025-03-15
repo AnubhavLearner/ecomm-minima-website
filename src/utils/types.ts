@@ -1,26 +1,22 @@
 
-export interface Product {
+export type Product = {
   id: string;
   name: string;
-  category: string;
   price: number;
-  discountPrice?: number;
+  description: string;
+  category: string;
+  images: string[];
   rating: number;
   reviews: number;
-  inStock: boolean;
-  images: string[];
+  stock: number;
+  brand: string;
+  featured: boolean;
   colors?: string[];
   sizes?: string[];
-  description: string;
-  details: string[];
-  featured?: boolean;
-  bestSeller?: boolean;
-  new?: boolean;
-}
+};
 
-export interface CartItem {
-  product: Product;
-  quantity: number;
-  color?: string;
-  size?: string;
-}
+export type Category = {
+  id: string;
+  name: string;
+  count: number;
+};
