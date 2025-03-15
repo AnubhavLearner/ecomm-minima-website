@@ -8,12 +8,11 @@ export type Product = {
   images: string[];
   rating: number;
   reviews: number;
-  stock: number;
   brand: string;
   featured: boolean;
+  stock?: number;  // Make stock optional
   colors?: string[];
   sizes?: string[];
-  // Add missing properties
   bestSeller?: boolean;
   new?: boolean;
   discountPrice?: number;

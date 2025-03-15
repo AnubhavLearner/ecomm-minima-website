@@ -1,4 +1,3 @@
-
 import { Product } from "./types";
 
 // Mock products data
@@ -24,6 +23,8 @@ const products: Product[] = [
       "Touch controls",
       "Compatible with voice assistants",
     ],
+    brand: "SoundTech",
+    stock: 145,
     featured: true,
     bestSeller: true,
   },
@@ -48,6 +49,8 @@ const products: Product[] = [
       "14-inch 4K display",
       "12 hours battery life",
     ],
+    brand: "TechPro",
+    stock: 89,
     featured: true,
   },
   {
@@ -73,6 +76,8 @@ const products: Product[] = [
       "Always-on Retina display",
       "18-hour battery life",
     ],
+    brand: "AppleTech",
+    stock: 210,
     featured: true,
     bestSeller: true,
     new: true,
@@ -98,6 +103,9 @@ const products: Product[] = [
       "Sweat and water resistant",
       "Up to 6 hours of listening time",
     ],
+    brand: "SoundTech",
+    stock: 325,
+    featured: false,
     bestSeller: true,
   },
   {
@@ -121,6 +129,8 @@ const products: Product[] = [
       "Dolby Vision and Atmos",
       "Multiple HDMI and USB ports",
     ],
+    brand: "ViewSonic",
+    stock: 56,
     featured: true,
   },
   {
@@ -144,6 +154,9 @@ const products: Product[] = [
       "Detachable USB-C cable",
       "Programmable macros",
     ],
+    brand: "KeyMaster",
+    stock: 98,
+    featured: false,
     new: true,
   },
   {
@@ -168,6 +181,9 @@ const products: Product[] = [
       "Foreign object detection",
       "Overcharge protection",
     ],
+    brand: "PowerUp",
+    stock: 450,
+    featured: false,
     bestSeller: true,
   },
   {
@@ -191,6 +207,9 @@ const products: Product[] = [
       "Custom automation routines",
       "Advanced security features",
     ],
+    brand: "SmartLiving",
+    stock: 74,
+    featured: false,
     new: true,
   },
   {
@@ -214,6 +233,8 @@ const products: Product[] = [
       "Connect multiple speakers",
       "Compact and portable design",
     ],
+    brand: "SoundTech",
+    stock: 310,
     featured: true,
   },
   {
@@ -238,6 +259,9 @@ const products: Product[] = [
       "Adjustable headrest",
       "5-year warranty",
     ],
+    brand: "ErgoComfort",
+    stock: 42,
+    featured: false,
   },
   {
     id: "p11",
@@ -261,6 +285,9 @@ const products: Product[] = [
       "Water resistant to 50m",
       "7-day battery life",
     ],
+    brand: "FitLife",
+    stock: 230,
+    featured: false,
     new: true,
   },
   {
@@ -284,6 +311,9 @@ const products: Product[] = [
       "RGB lighting",
       "70-hour battery life",
     ],
+    brand: "GameMax",
+    stock: 185,
+    featured: false,
     bestSeller: true,
   },
 ];
