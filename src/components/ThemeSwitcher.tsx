@@ -1,41 +1,26 @@
 
-import { Moon, Sun, Monitor } from "lucide-react";
+import { Moon, Sun } from "lucide-react";
 import { useTheme } from "@/contexts/ThemeContext";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Button } from "@/components/ui/button";
+import { Switch } from "@/components/ui/switch";
+import { Label } from "@/components/ui/label";
+import { cn } from "@/lib/utils";
 
-export function ThemeSwitcher() {
+export function ThemeSwitcher({ className }: { className?: string }) {
   const { theme, setTheme } = useTheme();
+  
+  const toggleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="icon" className="border-none">
-          {theme === "light" && <Sun className="h-5 w-5" />}
-          {theme === "dark" && <Moon className="h-5 w-5" />}
-          {theme === "system" && <Monitor className="h-5 w-5" />}
-          <span className="sr-only">Toggle theme</span>
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setTheme("light")}>
-          <Sun className="mr-2 h-4 w-4" />
-          <span>Light</span>
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("dark")}>
-          <Moon className="mr-2 h-4 w-4" />
-          <span>Dark</span>
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("system")}>
-          <Monitor className="mr-2 h-4 w-4" />
-          <span>System</span>
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
+    <div className={cn("flex items-center space-x-2", className)}>
+      <Sun className="h-4 w-4 text-muted-foreground" />
+      <Switch 
+        checked={theme === "dark"}
+        onCheckedChange={toggleTheme}
+        aria-label="Toggle theme"
+      />
+      <Moon className="h-4 w-4 text-muted-foreground" />
+    </div>
   );
 }
